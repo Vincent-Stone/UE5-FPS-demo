@@ -154,7 +154,9 @@ void AShooterProjectile::ProcessHit(AActor* HitActor, UPrimitiveComponent* HitCo
 			UGameplayStatics::ApplyDamage(HitCharacter, HitDamage, GetInstigator()->GetController(), this, HitDamageType);
 		}
 	}
-
+	else {
+		UGameplayStatics::ApplyDamage(HitActor, HitDamage, GetInstigator()->GetController(), this, HitDamageType);
+	}
 	// have we hit a physics object?
 	if (HitComp->IsSimulatingPhysics())
 	{

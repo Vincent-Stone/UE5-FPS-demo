@@ -44,4 +44,5 @@ public:
 	AShooterGameMode();
 	/** Increases the score for the given team */
 	void IncrementTeamScore(uint8 TeamByte);
+	void AddScoreForKill(AController* Killer, int32 Score);
 };

@@ -43,8 +43,8 @@ void AShooterCharacter::OnHealthUpdate()
 
 		if (CurrentHP <= 0)
 		{
-			FString deathMessage = FString::Printf(TEXT("You have been killed."));
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, deathMessage);
+			//FString deathMessage = FString::Printf(TEXT("You have been killed."));
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, deathMessage);
 		}
 		
 		//¸üÐÂHUD

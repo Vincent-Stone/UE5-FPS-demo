@@ -115,6 +115,8 @@ public:
 	UPROPERTY(ReplicatedUsing = OnRep_IsDead)
 	bool bIsDead = false;
 
+	bool IsDead() const { return bIsDead; }
+
 public:
 
 	/** Constructor */

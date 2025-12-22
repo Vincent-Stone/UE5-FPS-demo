@@ -49,6 +49,16 @@ uint8 AShooterGameMode::GetNextTeam()
 	return Assigned;
 }
 
+void AShooterGameMode::AddScoreForKill(AController* Killer, int32 Score)
+{
+	if (!Killer) return;
+
+	AShooterPlayerState* PS = Killer->GetPlayerState<AShooterPlayerState>();
+	if (!PS) return;
+
+	IncrementTeamScore((PS->GetTeam() + 1) % 2);
+}
+
 
 void AShooterGameMode::IncrementTeamScore(uint8 TeamByte)
 {
